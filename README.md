@@ -37,3 +37,20 @@ The dataset was downloaded from the UCI Machine Learning Repository:
 from sklearn.ensemble import RandomForestClassifier
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
+
+Step 1: Install Required Libraries
+
+pip install pandas scikit-learn joblib liac-arff
+▶️ Step 2: Train the Model
+
+python train_model.py
+🔍 Step 3: Predict
+
+python optional.py            # Manual input
+python url_predictor.py       # Automatic URL check
+📌 Output:
+🔗 Enter a URL to check: https://bit.ly/pay-now
+
+🚨 Rule-Based Alert: Suspicious URL detected. Likely Phishing ⚠️
+
+✅ Scan result saved to scan_results.csv
