@@ -1,56 +1,73 @@
-# 🛡️ Phishing Website Detection Tool
+# 🎣 Phishing Website Simulation Tool (Educational Purpose Only)
 
-This project is a hybrid **Phishing Website Detection Tool** that leverages both **rule-based heuristics** and a **machine learning model** to accurately classify URLs as **Legitimate** or **Phishing**.
-
----
-
-## 📌 Features
-
-- 🔍 Rule-based detection for obvious phishing indicators:
-  - Shortened URLs (e.g., `bit.ly`)
-  - IP addresses instead of domain names
-  - `@` symbols in URLs
-
-- 🤖 Machine Learning model (Random Forest) trained on a dataset of phishing features
-- 📂 Logging of predictions into a CSV file (`scan_results.csv`) with timestamp
-- 🛠️ Command-line interface for manual input and testing
-- 🧠 Real-time feature-based prediction using `.pkl` model
+This project is a **Phishing Website Simulation Tool** built for demonstrating how phishing attacks work in a **controlled, ethical, and educational environment**. It helps learners understand the risks, techniques, and countermeasures related to phishing.
 
 ---
 
-## 🧾 Dataset Used
+## ⚠️ DISCLAIMER
 
-The dataset was downloaded from the UCI Machine Learning Repository:
-
-🔗 [UCI Phishing Websites Dataset](https://archive.ics.uci.edu/dataset/327/phishing+websites)
+> 🚨 This tool is intended **strictly for educational purposes only**.  
+> ❌ Do **NOT** use this tool on real targets or without explicit permission.  
+> ⚖️ Unauthorized use of phishing techniques is **illegal** and violates ethical hacking guidelines.
 
 ---
 
-## ⚙️ How It Works
+## 🎯 Objective
 
-### 1. **Load and Preprocess the Dataset**
-- Dataset was converted from `.arff` to `.csv` using `liac-arff`
-- Data was cleaned and separated into features (X) and label (y)
+To simulate a phishing website that mimics a real login page, collects credentials (to a local file or terminal), and demonstrates how social engineering is used in cyberattacks — for **awareness and training purposes only**.
 
-### 2. **Model Training**
-```python
-from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier()
-model.fit(X_train, y_train)
+---
 
-Step 1: Install Required Libraries
+## 🔍 Features
 
-pip install pandas scikit-learn joblib liac-arff
-▶️ Step 2: Train the Model
+- 💻 Clones a basic login page (e.g., Facebook, Instagram, etc.)
+- 📝 Captures and logs entered usernames and passwords locally
+- ⚠️ Displays a fake error message or redirect to the real website
+- 📂 Logs data to a text file for demo purposes
+- ✅ Easy to host using Python or local web servers
 
-python train_model.py
-🔍 Step 3: Predict
+---
 
-python optional.py            # Manual input
-python url_predictor.py       # Automatic URL check
-📌 Output:
-🔗 Enter a URL to check: https://bit.ly/pay-now
+## 🛠️ Tech Stack
 
-🚨 Rule-Based Alert: Suspicious URL detected. Likely Phishing ⚠️
+- HTML/CSS (Frontend design)
+- PHP or Python (For form handling)
+- Optional: Ngrok (For exposing localhost)
 
-✅ Scan result saved to scan_results.csv
+---
+Start a local web server (for example, using PHP):
+
+Open the site in your browser:
+http://localhost:8080
+You can use Ngrok to expose it externally for testing in isolated environments:
+
+📁 Project Structure
+phishing-simulator/
+├── index.html          # Fake login page
+├── login.php           # Script to capture and log credentials
+├── credentials.txt     # Stored credentials (for demo only)
+└── README.md
+
+🎓 Learning Outcomes
+Understand how phishing pages are created
+Recognize social engineering tactics used in phishing
+Learn how to identify and defend against phishing attacks
+Realize the importance of email & URL verification, 2FA, and user training
+
+🛡️ Ethical Use Only
+This project is not meant to be deployed publicly or used to trick others.
+It is a training resource to build awareness and defensive strategies in cybersecurity environments such as:
+Ethical hacking labs
+Security awareness training
+Capture The Flag (CTF) competitions
+Red team/blue team simulations
+
+👨‍💻 Built With
+HTML/CSS
+PHP or Python
+Guidance from #TamizhanSkills
+
+🚀 Open to Opportunities
+I am exploring opportunities in ethical hacking, cybersecurity training, and secure web development. Let's connect and work together to build a safer digital world!
+
+
