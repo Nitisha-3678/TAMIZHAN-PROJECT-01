@@ -65,7 +65,7 @@ Red team/blue team simulations
 👨‍💻 Built With
 HTML/CSS
 PHP or Python
-Guidance from #TamizhanSkills
+
 
 🚀 Open to Opportunities
 I am exploring opportunities in ethical hacking, cybersecurity training, and secure web development. Let's connect and work together to build a safer digital world!
